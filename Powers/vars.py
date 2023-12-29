@@ -59,22 +59,22 @@ class Development:
 
     # Fill in these vars if you want to use Traditional method of deploying
     LOGGER = True
-    BOT_TOKEN = "YOUR BOT_TOKEN"
-    API_ID = 12345  # Your APP_ID from Telegram
-    API_HASH = "YOUR API HASH"  # Your APP_HASH from Telegram
-    OWNER_ID = 1344569458  # Your telegram user id defult to mine
-    MESSAGE_DUMP = -100845454887  # Your Private Group ID for logs
+    BOT_TOKEN = ""
+    API_ID = "26724473"  # Your APP_ID from Telegram
+    API_HASH = "7bc7d1f9b2f3d3f1bfd272db56ac0ba1"  # Your APP_HASH from Telegram
+    OWNER_ID = "940232666"  # Your telegram user id defult to mine
+    MESSAGE_DUMP = -1002119742257  # Your Private Group ID for logs
     DEV_USERS = []
     SUDO_USERS = []
     WHITELIST_USERS = []
     DB_URI = ""  # Your mongo DB URI
-    DB_NAME = ""  # Your DB name
+    DB_NAME = "Nagi"  # Your DB name
     NO_LOAD = []
     GENIUS_API_TOKEN = ""
     RMBG_API = ""
     PREFIX_HANDLER = ["!", "/","$"]
-    SUPPORT_GROUP = "SUPPORT_GROUP"
-    SUPPORT_CHANNEL = "SUPPORT_CHANNEL"
+    SUPPORT_GROUP = "https://t.me/Cari_Teman_Online_Id"
+    SUPPORT_CHANNEL = "https://t.me/SpotifyStreamMusic"
     VERSION = "VERSION"
     TIME_ZONE = 'Asia/Kolkata'
     BDB_URI = ""
