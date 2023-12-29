@@ -77,7 +77,7 @@ async def gen_start_kb(q: Message or CallbackQuery):
                 ),
                 (
                     "Update Bot",
-                    f"https://t.me/{SUPPORT_CHANNELS",
+                    f"https://t.me/{SUPPORT_CHANNEL}",
                     "url",
                 ),
             ],
