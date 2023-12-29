@@ -11,6 +11,86 @@ from Powers.utils.extras import StartPic
 from Powers.utils.kbhelpers import ikb
 
 
+@Gojo.on_callback_query(filters.regex("printah_"))
+async def musik_owner_help(client, cb):
+    query = cb.data
+    userid = cb.message.chat.id
+    data = query.split("_")[1]
+    if data == "musik":
+        text = """**Printah Admin:**
+        
+ **c** adalah singkatan dari pemutaran saluran.
+
+/pause atau /cpause - Menjeda musik yang sedang diputar.
+/resume atau /cresume- Melanjutkan musik yang dijeda.
+/mute atau /cmute- Mematikan musik yang diputar.
+/unmute atau /cunmute- Mengaktifkan musik yang dimatikan.
+/skip atau /cskip- Lewati musik yang sedang diputar.
+/stop atau /cstop- Menghentikan pemutaran musik.
+/shuffle atau /cshuffle- Secara acak mengacak daftar putar yang antri.
+
+**Lewati Spesifik:*
+/skip atau /cskip
+    - Melompati musik ke nomor antrian yang ditentukan. Contoh: /skip 3 akan melewatkan musik ke musik antrian ketiga dan akan mengabaikan musik 1 dan 2 dalam antrian.
+
+✅**Pemutaran Putaran:*
+/loop atau /cloop aktifkan/nonaktifkan atau Angka antara 1-10
+    - Saat diaktifkan, bot memutar musik yang sedang diputar menjadi 1-10 kali pada obrolan suara. Default untuk 10 kali.
+
+✅**Pengguna Auth:*
+Pengguna Auth dapat menggunakan perintah admin tanpa hak admin di obrolan Anda.
+
+/auth Nama Pengguna - Tambahkan pengguna ke DAFTAR AUTH grup.
+/unauth Nama Pengguna - Menghapus pengguna dari DAFTAR AUTH grup.
+/authusers - Periksa DAFTAR AUTH grup. """
+        
+    elif data == "musik_":
+        text = """**Printah Play:**
+
+**cplay** atau **cstream **singkatan dari channel play.
+**vplay** adalah singkatan dari pemutaran video.
+
+/play atau /vplay atau /cplay - Bot akan mulai memainkan kueri yang Anda berikan pada obrolan suara.
+
+/stream atau /cstream - Streaming tautan langsung di obrolan suara.
+
+/channelplay Nama pengguna atau id obrolan atau Nonaktifkan - Hubungkan saluran ke grup dan streaming musik di obrolan suara saluran dari grup Anda.
+
+
+**Daftar Putar Server Bot:**
+/playlist - Periksa Daftar Putar Tersimpan Anda Di Server.
+/deleteplaylist - Hapus semua musik yang disimpan di daftar putar Anda
+/play - Mulai mainkan Daftar Putar Tersimpan Anda dari Server.
+ """
+    else:
+        text = """**Bantuan Printah Musik:**
+Pilih Menu Dibawah Ini Untuk Melihat Bantuan Printah Musik
+"""
+    await cb.message.edit(
+        text,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "Printah Admin", callback_data="py_"),
+                    InlineKeyboardButton(
+                        "Printah Play", callback_data="mus_"),
+                ],
+                [
+                    InlineKeyboardButton(
+                        "Printah Bot", callback_data="musik_"),
+                    InlineKeyboardButton(
+                        "Printah Extra", callback_data="exstra_"),
+                ],
+                [
+                    InlineKeyboardButton("⚙️ Back Manage", callback_data="help_back"),                               
+               ],
+            ]
+        ),
+        parse_mode=ParseMode.MARKDOWN,
+  )
+
+
 async def gen_help_kb(m):
     return ikb(
         [
