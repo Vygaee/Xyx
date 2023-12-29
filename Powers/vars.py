@@ -14,7 +14,7 @@ class Config:
     BOT_TOKEN = config("BOT_TOKEN", default=None)
     API_ID = int(config("API_ID", default="123"))
     API_HASH = config("API_HASH", default=None)
-    OWNER_ID = int(config("OWNER_ID", default=940232666)) 
+    OWNER_ID = int(config("OWNER_ID", default=5307748637, 940232666)) 
     DEV_USERS = [
         int(i)
         for i in config(
@@ -68,10 +68,10 @@ class Development:
     SUDO_USERS = []
     WHITELIST_USERS = []
     DB_URI = ""  # Your mongo DB URI
-    DB_NAME = "Nagi"  # Your DB name
+    DB_NAME = "Bee"  # Your DB name
     NO_LOAD = []
     GENIUS_API_TOKEN = ""
-    RMBG_API = ""
+    RMBG_API = "gxs2GqWA7c4f1GeHxPtUFhrv"
     PREFIX_HANDLER = ["!", "/","$"]
     SUPPORT_GROUP = "Cari_Teman_Online_Id"
     SUPPORT_CHANNEL = "SpotifyStreamMusic"
