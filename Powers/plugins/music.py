@@ -11,14 +11,14 @@ from Powers.utils.extras import StartPic
 from Powers.utils.kbhelpers import ikb
 
 
-async def gen_formatting_kb(m):
+async def gen_help_kb(m):
     return ikb(
         [
             [
-                ("Markdown Formatting", "formatting.md_formatting"),
-                ("Fillings", "formatting.fillings"),
+                ("Admin", "Play"),
+                ("Bot", "Ekstra"),
             ],
-            [("Random Content", "formatting.random_content")],
+            [("Random Music", "Random Manage")],
         ],
         True,
         "commands"
@@ -26,7 +26,7 @@ async def gen_formatting_kb(m):
 
 
 @Gojo.on_message(
-    command(["markdownhelp", "formatting"]) & filters.private,
+    command(["mhelp", "Music"]) & filters.private,
 )
 async def markdownhelp(_, m: Message):
     await m.reply_photo(
@@ -39,12 +39,12 @@ async def markdownhelp(_, m: Message):
     return
 
 
-@Gojo.on_callback_query(filters.regex("^formatting."))
-async def get_formatting_info(c: Gojo, q: CallbackQuery):
+@Gojo.on_callback_query(filters.regex("^Music."))
+async def get_Music_info(c: Gojo, q: CallbackQuery):
     cmd = q.data.split(".")[1]
-    kb = ikb([[("Back", "back.formatting")]])
+    kb = ikb([[("Back", "back.Music")]])
 
-    if cmd == "md_formatting":
+    if cmd == "md_music":
         
         txt = """<b>Markdown Formatting</b>
 You can format your message using <b>bold</b>, <i>italic</i>, <u>underline</u>, <strike>strike</strike> and much more. Go ahead and experiment!
@@ -77,9 +77,9 @@ This will show button 1 and 2 on the same line, while 3 will be underneath."""
                 chat_id=q.message.chat.id,
                 text=txt,
                 parse_mode=enums.ParseMode.HTML,)
-    elif cmd == "fillings":
+    elif cmd == "Play":
         await q.edit_message_caption(
-            caption="""<b>Fillings</b>
+            caption="""<b>Play</b>
 
 You can also customise the contents of your message with contextual data. For example, you could mention a user by name in the welcome message, or mention them in a filter!
 You can use these to mention a user in notes too!
@@ -95,7 +95,7 @@ You can use these to mention a user in notes too!
             reply_markup=kb,
             parse_mode=enums.ParseMode.HTML,
         )
-    elif cmd == "random_content":
+    elif cmd == "Bot":
         await q.edit_message_caption(
             caption="""<b>Random Content</b>
 
@@ -129,7 +129,7 @@ Sup? <code>{first}</code>""",
 @Gojo.on_callback_query(filters.regex("^back."))
 async def send_mod_help(_, q: CallbackQuery):
     await q.edit_message_caption(
-        caption="""Formatting
+        caption="""Music
 
 Gojo supports a large number of formatting options to make your messages more expressive. Take a look by clicking the buttons below!""",
         reply_markup=(await gen_formatting_kb(q.message)),
@@ -138,18 +138,18 @@ Gojo supports a large number of formatting options to make your messages more ex
     return
 
 
-__PLUGIN__ = "formatting"
+__PLUGIN__ = "Music"
 
-__alt_name__ = ["formatting", "markdownhelp", "markdown"]
+__alt_name__ = ["Admin", "Play", "Bot", "Extra"]
 __buttons__ = [
     [
-        ("Markdown Formatting", "formatting.md_formatting"),
-        ("Fillings", "formatting.fillings"),
+        ("Admin", "Play"),
+        ("Bot", "Extra"),
     ],
-    [("Random Content", "formatting.random_content")],
+    [("Random Music", "Random Manage")],
 ]
 
 __HELP__ = """
-**Formatting**
+**Music**
 
 Gojo supports a large number of formatting options to make your messages more expressive. Take a look by clicking the buttons below!"""
