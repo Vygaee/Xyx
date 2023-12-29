@@ -77,7 +77,7 @@ async def gen_start_kb(q: Message or CallbackQuery):
                 ),
                 (
                     "Update Bot",
-                    "https://t.me/SpotifyStreamMusic",
+                    f"https://t.me/{SUPPORT_CHANNELS",
                     "url",
                 ),
             ],
