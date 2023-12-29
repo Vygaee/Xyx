@@ -680,5 +680,4 @@ birthday_wish =  [
     "Mengucapkan selamat ulang tahun yang penuh kejutan, kebahagiaan, dan segala hal yang membuatmu merasa hidup.",
     "Selamat ulang tahun untuk seseorang yang membuatku tersenyum setiap hari, semoga harimu seindah dirimu.",
     "Mengirimkanmu semua cinta dan harapan terhangatku di hari istimewamu, semoga tahunmu dipenuhi dengan cinta dan kebahagiaan.",
-    "Semoga ulang tahunmu menjadi saat untuk menghargai semua orang yang membuat hidupmu istimewa, dan menghargai semua kenangan yang telah kamu ciptakan.",
-    “Semoga ulang tahunmu seindah dirimu, penuh dengan kegembiraan dan perayaan.",]
+    "Semoga ulang tahunmu menjadi saat untuk menghargai semua orang yang membuat hidupmu istimewa, dan menghargai semua kenangan yang telah kamu ciptakan.",]
