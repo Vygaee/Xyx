@@ -96,13 +96,6 @@ elif not Config.GENIUS_API_TOKEN:
     is_genius_lyrics = False
     genius_lyrics = False
 
-is_audd = False
-Audd = None
-if Config.AuDD_API:
-    is_audd = True
-    Audd = Config.AuDD_API
-    LOGGER.info("Found Audd api")
-
 is_rmbg = False
 RMBG = None
 if Config.RMBG_API:
