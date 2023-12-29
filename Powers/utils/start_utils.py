@@ -60,11 +60,11 @@ async def gen_start_kb(q: Message or CallbackQuery):
             ],
             [
                 (
-                    "🗃️ Music",
-                    "printah_"                  
+                    "🧰 Music",
+                    "^formatting."                  
                 ),
                 (
-                    "Owner ❤️",
+                    "Developer 👑",
                     Config.OWNER_ID,
                     "user_id",
                 ),
@@ -72,7 +72,7 @@ async def gen_start_kb(q: Message or CallbackQuery):
             [
                 (
                     "Essential",
-                    "https://t.me/+PcVYvdzNt4E1YjM1",
+                    "https://t.me/Usern4meDoesNotExist404",
                     "url",
                 ),
                 (
