@@ -64,20 +64,20 @@ async def gen_start_kb(q: Message or CallbackQuery):
                     "^formatting."                  
                 ),
                 (
-                    "Developer 👑",
+                    "Developer² 💒",
                     Config.OWNER_ID,
                     "user_id",
                 ),
             ],
             [
                 (
-                    "Essential",
+                    "Developer 👑",
                     "https://t.me/Usern4meDoesNotExist404",
                     "url",
                 ),
                 (
-                    "Powered by",
-                    f"https://{Config.SUPPORT_CHANNEL}.t.me",
+                    "Update Bot",
+                    "https://t.me/SpotifyStreamMusic",
                     "url",
                 ),
             ],
