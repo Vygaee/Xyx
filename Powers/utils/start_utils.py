@@ -61,7 +61,7 @@ async def gen_start_kb(q: Message or CallbackQuery):
             [
                 (
                     "🧰 Music",
-                    "^formatting."                  
+                    "md_music"                  
                 ),
                 (
                     "Developer² 💒",
