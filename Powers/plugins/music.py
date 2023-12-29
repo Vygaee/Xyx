@@ -79,7 +79,34 @@ Pengguna Auth dapat menggunakan perintah admin tanpa hak admin di obrolan Anda.
         await q.edit_message_caption(
             caption="""<b>Bot/Extra</b>
 
-""",
+<b>✅ Perintah Bot:</b>
+/stats - Dapatkan Top 10 Tracks Global Stats, Top 10 Users of bot, Top 10 Chats on bot, Top 10 Played in a chat, dll.
+
+/sudolist - Periksa Pengguna Sudo dari Bot Musik Musikku
+
+/lyrics Music Name - Mencari Lirik untuk Musik tertentu di web.
+
+/song Nama Trek atau Tautan YT - Unduh trek apa pun dari youtube dalam format mp3 atau mp4.
+
+c adalah singkatan dari pemutaran saluran.
+/queue atau /cqueue- Periksa Daftar Antrian Musik
+
+<b>Printah Extra</b>
+✅ Perintah Ekstra:
+/start - Mulai Bot Musik.
+/help - Dapatkan Menu Helper Perintah dengan penjelasan rinci tentang perintah.
+/ping - Ping Bot dan periksa Ram, Cpu dll statistik Bot.
+
+Setelan Grup
+Anda dapat mengatur Kualitas Audio yang ingin Anda streaming di obrolan suara.
+✅ Pengguna Auth : Anda dapat mengubah mode perintah admin dari sini ke semua orang atau hanya admin.
+✅ Mode Bersih : Saat diaktifkan, hapus pesan bot setelah 5 menit dari grup Anda untuk memastikan obrolan Anda tetap bersih dan baik.
+✅ Command Clean : Saat diaktifkan, Bot akan segera menghapus perintah yang dijalankannya /play, /pause, /shuffle, /stop dll.
+
+Pengaturan Putar
+/playmode - Dapatkan panel pengaturan pemutaran lengkap dengan tombol di mana Anda dapat mengatur pengaturan pemutaran grup Anda.
+Direct or Inline - Mengubah mode pencarian saat Anda memberikan mode /play.
+Tipe Putar Semua Orang atau Admin - Jika admin, hanya admin yang ada di grup yang dapat memutar musik di obrolan suara.""",
             reply_markup=kb,
             parse_mode=enums.ParseMode.HTML,
         )
@@ -100,7 +127,7 @@ Gojo supports a large number of formatting options to make your messages more ex
     return
 
 
-__PLUGIN__ = "formatting"
+__PLUGIN__ = "music"
 
 __alt_name__ = ["formatting", "markdownhelp", "markdown"]
 __buttons__ = [
@@ -112,6 +139,6 @@ __buttons__ = [
 ]
 
 __HELP__ = """
-**Formatting**
+**Bantuan Music**
 
 Gojo supports a large number of formatting options to make your messages more expressive. Take a look by clicking the buttons below!"""
