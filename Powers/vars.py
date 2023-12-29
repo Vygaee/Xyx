@@ -14,7 +14,7 @@ class Config:
     BOT_TOKEN = config("BOT_TOKEN", default=None)
     API_ID = int(config("API_ID", default="123"))
     API_HASH = config("API_HASH", default=None)
-    OWNER_ID = int(config("OWNER_ID", default=5307748637, 940232666)) 
+    OWNER_ID = int(config("OWNER_ID", default=940232666)) 
     DEV_USERS = [
         int(i)
         for i in config(
@@ -44,8 +44,8 @@ class Config:
     BDB_URI = config("BDB_URI",default=None)
     NO_LOAD = config("NO_LOAD", default="").split()
     PREFIX_HANDLER = config("PREFIX_HANDLER", default="/").split()
-    SUPPORT_GROUP = config("SUPPORT_GROUP", default="gojo_bots_network")
-    SUPPORT_CHANNEL = config("SUPPORT_CHANNEL", default="gojo_bots_network")
+    SUPPORT_GROUP = config("SUPPORT_GROUP", default="")
+    SUPPORT_CHANNEL = config("SUPPORT_CHANNEL", default="")
     WORKERS = int(config("WORKERS", default=16))
     TIME_ZONE = config("TIME_ZONE",default='Asia/Kolkata')
     BOT_USERNAME = ""
