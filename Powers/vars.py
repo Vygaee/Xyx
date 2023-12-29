@@ -73,8 +73,8 @@ class Development:
     GENIUS_API_TOKEN = ""
     RMBG_API = ""
     PREFIX_HANDLER = ["!", "/","$"]
-    SUPPORT_GROUP = "https://t.me/Cari_Teman_Online_Id"
-    SUPPORT_CHANNEL = "https://t.me/SpotifyStreamMusic"
+    SUPPORT_GROUP = "Cari_Teman_Online_Id"
+    SUPPORT_CHANNEL = "SpotifyStreamMusic"
     VERSION = "VERSION"
     TIME_ZONE = 'Asia/Kolkata'
     BDB_URI = ""
